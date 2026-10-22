@@ -1,0 +1,52 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sign in to Philips Home Access",
+        "description": "Use an account dedicated to Home Assistant: the Philips cloud keeps one session per account, so signing in here signs out a phone that uses the same account. Add a family member in the Philips app and use that account.",
+        "data": {
+          "email": "Email",
+          "password": "Password",
+          "areacode": "Country code"
+        },
+        "data_description": {
+          "email": "The email address of the account.",
+          "password": "The password of the account.",
+          "areacode": "The phone country code of the account, without the plus sign, for example 84."
+        }
+      },
+      "pick": {
+        "title": "Choose the lock",
+        "description": "The account has several locks. Each lock is one configuration entry.",
+        "data": {
+          "esn": "Lock"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in again",
+        "description": "The Philips cloud refused the credentials of {email}. Enter the current password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the Philips cloud.",
+      "invalid_auth": "The Philips cloud refused the email or the password.",
+      "no_locks": "The account has no lock that this integration can use.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This lock is already configured.",
+      "reauth_successful": "The password was updated."
+    }
+  },
+  "exceptions": {
+    "unlock_failed": {
+      "message": "Could not unlock {name}: {reason}"
+    },
+    "lock_not_supported": {
+      "message": "{name} locks itself about 5 seconds after unlocking; there is no lock command."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "domain": "philips_lock",
+  "name": "Philips Smart Lock",
+  "codeowners": ["@dinhhuy258"],
+  "config_flow": true,
+  "documentation": "https://github.com/dinhhuy258/ha-philips-lock",
+  "integration_type": "device",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/dinhhuy258/ha-philips-lock/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
